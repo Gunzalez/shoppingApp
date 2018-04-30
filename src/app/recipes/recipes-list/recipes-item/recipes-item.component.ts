@@ -18,9 +18,7 @@ export class RecipesItemComponent implements OnInit {
   }
 
   recipeClicked(recipe: Recipe){
-    //console.log(recipe)
     this.recipeSelected.emit(recipe)
-
   }
 
 }
