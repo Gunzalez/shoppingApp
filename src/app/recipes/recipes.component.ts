@@ -8,8 +8,8 @@ import { Recipe } from './recipe.model';
 })
 export class RecipesComponent implements OnInit {
 
-  recipe: Recipe = new Recipe('Super Amazing Recipe', 'Hmm will it work', 'https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2016/10/mexican-chicken-burger.jpg?itok=_AGDavEw')
-
+  recipe: Recipe;
+  
   constructor() { }
 
   ngOnInit() {
