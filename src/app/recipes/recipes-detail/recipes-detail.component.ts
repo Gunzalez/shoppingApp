@@ -17,4 +17,10 @@ export class RecipesDetailComponent implements OnInit {
   ngOnInit() {
   }
 
+  setStatus(eventData){
+    this.dropdownStatus = eventData;
+  }
+
+
+
 }
