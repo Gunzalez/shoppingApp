@@ -8,6 +8,8 @@ import { Recipe } from '../recipe.model';
 })
 export class RecipesDetailComponent implements OnInit {
 
+  dropdownStatus: boolean = true;
+
   @Input() recipe: Recipe;
 
   constructor() { }
