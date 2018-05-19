@@ -9,6 +9,6 @@ export class appToggleMenu {
     @HostBinding('class.open') isOpen:boolean = false
 
     @HostListener('click') myclick(){
-        this.isOpen = !this.isOpen        
+        this.isOpen = !this.isOpen
     }
 }
