@@ -1,5 +1,7 @@
+import { Ingredient } from './../../shared/ingredient.model';
+import { Recipe } from './../recipe.model';
 import { Component, OnInit, Input } from '@angular/core';
-import { Recipe } from '../recipe.model';
+import { ShoppingListService } from '../../shopping-list/shopping-list.service';
 
 @Component({
   selector: 'app-recipes-detail',
@@ -12,13 +14,20 @@ export class RecipesDetailComponent implements OnInit {
 
   @Input() recipe: Recipe;
 
-  constructor() { }
+  constructor(private shoppingListService: ShoppingListService) { }
 
   ngOnInit() {
   }
 
   setStatus(eventData){
     this.dropdownStatus = eventData;
+  }
+
+  addButtonWasClicked(recipe: Recipe){
+    recipe.ingredients.map((ingredient: Ingredient)=>{
+      this.shoppingListService.addIngredient(ingredient);
+    })
+    
   }
 
 
