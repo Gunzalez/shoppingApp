@@ -24,6 +24,7 @@ export class ShoppingListService {
         // ingredients.map((ingredient: Ingredient) => {
         //     this.ingredients.push(ingredient);
         // })
+        // does the same as below, both alert the update of the list somehow
 
         this.ingredients.push(...ingredients);
     }
