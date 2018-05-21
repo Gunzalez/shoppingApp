@@ -18,6 +18,7 @@ export class ShoppingListComponent implements OnInit {
 
     this.shoppingListSerice.ingredientAdded.subscribe(
       (ingredients: Ingredient[]) => {
+        console.log('subscribed')
         this.ingredients = ingredients
       }
     )
